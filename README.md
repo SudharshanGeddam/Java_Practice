@@ -38,7 +38,6 @@ The goal is to strengthen Java programming skills step by step — starting with
 - [ ] Matrix addition, subtraction, multiplication  
 - [ ] Transpose of a matrix  
 - [ ] Remove duplicates from an array  
-- [ ] Rotate an array  
 
 ---
 
