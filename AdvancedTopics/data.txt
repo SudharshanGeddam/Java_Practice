@@ -1,0 +1,3 @@
+This is an example of FileHandling concept.
+Hello! Welcome to java.
+Hey Everyone...
