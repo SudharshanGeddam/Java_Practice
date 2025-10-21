@@ -59,49 +59,50 @@ class Matrixes
     }
     public static void main(String[] args) {
         int opt;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Welcome to Matrix program!");
-        int rows, cols;
-        System.out.println("Enter number of rows: ");
-        rows = sc.nextInt();
-        System.out.println("Enter number of columns: ");
-        cols = sc.nextInt();
-        int[][] arr1 = new int[rows][cols];
-        int[][] arr2 = new int[rows][cols];
-        System.out.println("Enter first array elements:\n");
-        for(int i = 0; i < rows; i++)
-        {
-            for(int j = 0; j < cols; j++)
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Welcome to Matrix program!");
+            int rows, cols;
+            System.out.println("Enter number of rows: ");
+            rows = sc.nextInt();
+            System.out.println("Enter number of columns: ");
+            cols = sc.nextInt();
+            int[][] arr1 = new int[rows][cols];
+            int[][] arr2 = new int[rows][cols];
+            System.out.println("Enter first array elements:\n");
+            for(int i = 0; i < rows; i++)
             {
-                arr1[i][j] = sc.nextInt();
+                for(int j = 0; j < cols; j++)
+                {
+                    arr1[i][j] = sc.nextInt();
+                }
             }
-        }
-        System.out.println("Enter second array elements:\n");
-        for(int i = 0; i < rows; i++)
-        {
-            for(int j = 0; j < cols; j++)
+            System.out.println("Enter second array elements:\n");
+            for(int i = 0; i < rows; i++)
             {
-                arr2[i][j] = sc.nextInt();
+                for(int j = 0; j < cols; j++)
+                {
+                    arr2[i][j] = sc.nextInt();
+                }
             }
-        }
-        System.out.println("1. Addition \n2.Subtraction \n3.Multiplication \n4.Exit");
-        System.out.println("Choose any one option from above list: ");
-        opt = sc.nextInt();
-        switch(opt)
-        {
-            case 1 -> {
-                AdditionOfMatrixes(rows, cols, arr1, arr2);
+            System.out.println("1. Addition \n2.Subtraction \n3.Multiplication \n4.Exit");
+            System.out.println("Choose any one option from above list: ");
+            opt = sc.nextInt();
+            switch(opt)
+            {
+                case 1 -> {
+                    AdditionOfMatrixes(rows, cols, arr1, arr2);
+                }
+                case 2 -> {
+                    SubtractionOfMatrixes(rows, cols, arr1, arr2);
+                }
+                case 3 -> {
+                    MultiplicationOfMatrixes(rows, cols, arr1, arr2);
+                }
+                case 4 -> {
+                    System.out.println("Program Exited!!!");
+                }
+                default -> System.out.println("Invalid Option!");
             }
-            case 2 -> {
-                SubtractionOfMatrixes(rows, cols, arr1, arr2);
-            }
-            case 3 -> {
-                MultiplicationOfMatrixes(rows, cols, arr1, arr2);
-            }
-            case 4 -> {
-                System.out.println("Program Exited!!!");
-            }
-            default -> System.out.println("Invalid Option!");
         }
     }
 }

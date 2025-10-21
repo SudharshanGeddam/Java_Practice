@@ -5,13 +5,14 @@ class SimpleCalc
 {
     public static void main(String[] args) {
         int num1, num2, opt;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter first number: ");
-        num1 = sc.nextInt();
-        System.err.println("Enter second number: ");
-        num2 = sc.nextInt();
-        System.out.println(" 1. Addition\n 2. Subtraction\n 3. Division\n 4. Multiplication\n 5. Exit");
-        opt = sc.nextInt();
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter first number: ");
+            num1 = sc.nextInt();
+            System.err.println("Enter second number: ");
+            num2 = sc.nextInt();
+            System.out.println(" 1. Addition\n 2. Subtraction\n 3. Division\n 4. Multiplication\n 5. Exit");
+            opt = sc.nextInt();
+        }
         switch(opt) 
         {
             case 1 ->

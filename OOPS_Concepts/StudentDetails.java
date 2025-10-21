@@ -4,8 +4,8 @@ class StudentDetails{
     static int rollNo;
 
     StudentDetails(String name, int rollNo){
-        this.name = name;
-        this.rollNo = rollNo;
+        StudentDetails.name = name;
+        StudentDetails.rollNo = rollNo;
     }
 
     void Display(){
@@ -14,11 +14,12 @@ class StudentDetails{
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the student name: ");
-        name = sc.nextLine();
-        System.out.println("Enter the student rollNo: ");
-        rollNo = sc.nextInt();
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter the student name: ");
+            name = sc.nextLine();
+            System.out.println("Enter the student rollNo: ");
+            rollNo = sc.nextInt();
+        }
         StudentDetails sd = new StudentDetails(name, rollNo);
         sd.Display();
         StudentDetails ds = new StudentDetails("Sudharshan", 24985);   

@@ -8,9 +8,10 @@ class LinearSearch
         int n = arr.length;
         PrintArray(arr, n);
         int num;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the element you want to search: ");
-        num = sc.nextInt();
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter the element you want to search: ");
+            num = sc.nextInt();
+        }
         if(num == arr[0])
         {
             System.out.println(num + "found at " + 0 + "th position.");

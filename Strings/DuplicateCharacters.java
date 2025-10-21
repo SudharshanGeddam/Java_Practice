@@ -2,9 +2,10 @@ import java.util.Scanner;
 class DuplicateCharacters{
     public static void main(String[] args){
         String str;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a String: ");
-        str = sc.nextLine();
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter a String: ");
+            str = sc.nextLine();
+        }
         char ch;
         System.out.println("Duplicate Characters: ");
         for(int i = 0; i < str.length(); i++){

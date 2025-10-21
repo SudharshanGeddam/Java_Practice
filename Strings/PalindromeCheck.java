@@ -3,8 +3,9 @@ class PalindromeCheck{
     public static void main(String[] args) {
         String str;
         System.out.println("Enter a string: ");
-        Scanner sc = new Scanner(System.in);
-        str = sc.nextLine();
+        try (Scanner sc = new Scanner(System.in)) {
+            str = sc.nextLine();
+        }
         System.out.println("Entered  string is: " + str);
         String rev = new StringBuilder(str).reverse().toString();
         str = str.toLowerCase();

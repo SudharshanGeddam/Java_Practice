@@ -6,9 +6,10 @@ class Palindrome
     public static void main(String[] args) {
         int num, temp;
         int rem, sum = 0;
-        Scanner sc =  new Scanner(System.in);
-        System.out.println("Enter a number: ");
-        num = sc.nextInt();
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter a number: ");
+            num = sc.nextInt();
+        }
         temp = num;
         while(num != 0)
         {

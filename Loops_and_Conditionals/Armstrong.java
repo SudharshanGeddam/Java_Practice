@@ -6,9 +6,10 @@ class Armstrong
     public static void main(String[] args) {
         int num;
         int sum = 0, rem;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number: ");
-        num = sc.nextInt();
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter a number: ");
+            num = sc.nextInt();
+        }
         int temp = num;
         while(num != 0)
         {
